@@ -12,15 +12,15 @@ const Home = () => {
   const [editId, setEditId] = useState(null);
   const [filter, setFilter] = useState("all");
   const [sortBy, setSortBy] = useState("none");
-  // Load tasks
+
  const [tasks, setTasks] = useState(() => { const saved = localStorage.getItem("tasks"); return saved ? JSON.parse(saved) : []; });
 
-  // Save tasks
+  
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
-  // Add or Edit Task
+  
   const addTask = () => {
     if (!input.trim() || !priority){
       toast.error("Please enter task and select priority!");
@@ -93,7 +93,7 @@ const getNextSaturday = () => {
   let diff = 6 - day;
 
   if (diff <= 1) {
-    // if Saturday is today OR tomorrow → push to next week
+   
     diff += 7;
   }
 
@@ -146,7 +146,7 @@ const isOverdue = (date) => {
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-[#6F4E37] via-[#A67B5B] to-[#ECB176] p-6">
 
   <SparkleBackground />
-      {/* Header */}
+     
       <div className="flex justify-between items-center mb-6 text-white">
         <div>
           <h1 className="text-3xl font-bold">Hello, {profile?.name} 👋</h1>
@@ -162,11 +162,11 @@ const isOverdue = (date) => {
         />
       </div>
 
-      {/* Glass Card */}
+     
       <div className="backdrop-blur-xl  bg-white/10 border border-white/20 
       rounded-3xl p-6 shadow-xl max-w-md mx-auto">
 
-        {/* Input Section */}
+        
         
         <div className="mb-4">
   <p className="text-white text-sm">
@@ -231,8 +231,7 @@ focus:ring-2 focus:ring-[#FED8B1] transition"
 
           <div className="flex items-center gap-2 flex-wrap">
 
-  {/* Quick Date Buttons */}
-  {/* Today */}
+  
 <button
   onClick={() => setDueDate(today)}
   className={`px-3 py-1 rounded-full text-sm transition ${
@@ -269,7 +268,7 @@ focus:ring-2 focus:ring-[#FED8B1] transition"
  
 <div className="relative">
 
-  {/* Visible Icon */}
+ 
   <div
     className={`cursor-pointer p-2 rounded-full transition border
     ${
@@ -281,7 +280,7 @@ focus:ring-2 focus:ring-[#FED8B1] transition"
     📅
   </div>
 
-  {/* Actual Input (placed ON TOP of icon) */}
+  
   <input
     type="date"
     value={dueDate}
@@ -292,7 +291,7 @@ focus:ring-2 focus:ring-[#FED8B1] transition"
 
 
 
-  {/* Priority */}
+
  <select
   value={priority}
   onChange={(e) => setPriority(e.target.value)}
@@ -304,7 +303,7 @@ focus:ring-2 focus:ring-[#FED8B1] transition"
   <option value="High">High</option>
 </select>
 
-  {/* Add Button */}
+ 
   <motion.button
   onClick={addTask}
   whileTap={{ scale: 0.95 }}
@@ -319,8 +318,7 @@ focus:ring-2 focus:ring-[#FED8B1] transition"
 </div>
         </div>
 
-        {/* Tasks */}
-        {/* Tasks */}
+       
 <div className="space-y-3 max-h-[250px] overflow-y-auto scrollbar-hide">
 
   {sortedTasks.length === 0 && (

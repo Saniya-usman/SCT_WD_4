@@ -43,7 +43,7 @@ const Profile = () => {
     transition={{ duration: 0.6 }}
   >
     <SparkleBackground />
-    {/* Soft floating glow background */}
+    
     <div className="absolute w-72 h-72 bg-white/20 blur-3xl rounded-full top-10 left-10 animate-pulse"></div>
     <div className="absolute w-96 h-96 bg-[#4B2E2B]/30 blur-3xl rounded-full bottom-10 right-10 animate-pulse"></div>
 
@@ -61,7 +61,7 @@ const Profile = () => {
 </p>
 </motion.div>
 
-    {/* Card */}
+    
     <motion.div
   className="relative z-10 w-[380px] p-8 rounded-3xl 
   backdrop-blur-2xl bg-white/10 border border-white/20 shadow-2xl"
@@ -75,7 +75,7 @@ const Profile = () => {
   }}
 >
 
-      {/* Title */}
+    
       <h1 className="text-3xl font-bold text-white text-center mb-2">
         Create Profile
       </h1>
@@ -83,7 +83,7 @@ const Profile = () => {
         Set up your account to continue
       </p>
 
-      {/* Hidden file input */}
+      
       <input
         type="file"
         accept="image/*"
@@ -92,7 +92,7 @@ const Profile = () => {
         className="hidden"
       />
 
-      {/* Avatar */}
+     
      <motion.label
   htmlFor="fileInput"
   className="flex justify-center cursor-pointer"
@@ -115,13 +115,13 @@ const Profile = () => {
             </div>
           )}
 
-          {/* hover glow */}
+          
           <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 
           bg-white/10 blur-md transition"></div>
         </div>
      </motion.label>
 
-      {/* Inputs */}
+     
       <div className="mt-6 space-y-3">
 
         <input
@@ -143,7 +143,7 @@ const Profile = () => {
         />
       </div>
 
-      {/* Button */}
+      
       <motion.button
   onClick={handleSubmit}
   className="w-full mt-6 py-3 rounded-xl font-semibold text-white
