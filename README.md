@@ -2,7 +2,7 @@
 A modern, interactive task management web application built using React.js and Tailwind CSS, featuring task scheduling, priority system, animations, progress tracking, and local storage persistence.
 
 🚀 Live Demo
-👉: https://your-app-link.netlify.app
+👉 https://resilient-crumble-4c46ce.netlify.app/
 
 📸 Preview 
 👤 Profile Page 
